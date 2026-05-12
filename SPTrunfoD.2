@@ -1,0 +1,127 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main(){
+
+    //Declaração das variaveis.
+    char estado[4], cod[5], cidade[50];
+    int populacao, Pturi;
+    float area, Dpop, PIBpc;
+    double pib;
+
+    char estado2[4], cod2[5], cidade2[50];
+    int populacao2, Pturi2;
+    float area2, Dpop2, PIBpc2;
+    double pib2;
+
+    //Coleta de dados inseridos pelo usuário.
+    printf("Carta 1:\n");
+    printf("Insira um estado de A a H: ");
+    scanf(" %s", estado);
+
+    //Converte letras minúsculas para maiúsculas.
+    estado[0] = toupper(estado[0]);
+
+    //Verifica se é uma letra permitida.
+    if (estado[0] >= 'A' && estado[0] <= 'H')
+    {
+
+    } else {
+        printf("Inválido\n");
+        return 0;
+    }
+
+    //Consome o \n deixado pelo scanf
+    getchar();
+
+    printf("Insira a cidade: ");
+    fgets(cidade, 50, stdin);
+
+    printf("Insira o codigo (Estado + número de 01 a 04): ");
+    scanf("%s", cod);
+
+    printf("Insira a população: ");
+    scanf("%d", &populacao);
+
+    printf("Insira a Área: ");
+    scanf("%f", &area);
+
+    printf("Insira o PIB: ");
+    scanf("%lf", &pib);
+
+    printf("Insira a quantidade de pontos turisticos: ");
+    scanf("%d", &Pturi);
+
+    printf("\n");
+
+    (Dpop = populacao/area);
+    (PIBpc = pib/populacao);
+
+    //impressão dos dados inseridos pelo usuário.
+    printf("Estado: %s\n", estado);
+    printf("Cidade: %s", cidade);
+    printf("Codigo carta: %s\n", cod);
+    printf("População: %d\n", populacao);
+    printf("Área: %.2fkm²\n", area);
+    printf("PIB: %.2f de reais\n", pib);
+    printf("Pontos turísticos: %d\n", Pturi);
+    printf("Densidade populacional: %.2f hab/km²\n", Dpop);
+    printf("PIB per capita: %.2f reais\n", PIBpc);
+
+    printf("\n");
+
+        //Coleta de dados inseridos pelo usuário.
+    printf("Carta 2:\n");
+    printf("Insira um estado de A a H: ");
+    scanf(" %s", estado2);
+
+     estado2[0] = toupper(estado2[0]);
+
+        if (estado2[0] >= 'A' && estado2[0] <= 'H')
+    {
+
+    } else {
+        printf("Inválido\n");
+        return 0;
+    }
+
+
+    //Consome o \n deixado pelo scanf
+    getchar();
+
+    printf("Insira a cidade: ");
+    fgets(cidade2, 50, stdin);
+
+    printf("Insira o codigo (Estado + número de 01 a 04): ");
+    scanf("%s", cod2);
+
+    printf("Insira a população: ");
+    scanf("%d", &populacao2);
+
+    printf("Insira a Área: ");
+    scanf("%f", &area2);
+
+    printf("Insira o PIB: ");
+    scanf("%lf", &pib2);
+
+    printf("Insira a quantidade de pontos turisticos: ");
+    scanf("%d", &Pturi2);
+
+    printf("\n");
+
+    (Dpop2 = populacao2/area2);
+    (PIBpc2 = pib2/populacao2);
+
+    //impressão dos dados inseridos pelo usuário.
+    printf("Estado: %s\n", estado2);
+    printf("Cidade: %s", cidade2);
+    printf("Codigo carta: %s\n", cod2);
+    printf("População: %d\n", populacao2);
+    printf("Área: %.2fkm²\n", area2);
+    printf("PIB: %.2f de reais\n", pib2);
+    printf("Pontos turísticos: %d\n", Pturi2);
+    printf("Densidade populacional: %.2f hab/km²\n", Dpop2);
+    printf("PIB per capita: %.2f reais\n", PIBpc2);
+    return 0;
+}
